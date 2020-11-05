@@ -9,7 +9,6 @@ html,s,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,addre
  *  一般・共通設定
  ================================================*/
 body {
-	clear:both;
 	font-size:16px;
 	font-family:"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
 	line-height:1.6;
@@ -17,8 +16,12 @@ body {
 
 s {
 	float:right;
-	width:30%;
+	width:36%;
 	pointer-events: none;
+}
+
+div {
+	clear:both;
 }
 
 #contents {
