@@ -1,6 +1,6 @@
 const canvas = document.getElementById("board");
 const ctx = canvas.getContext("2d");
-let gridSize = 19;
+let gridSize = 9;
 let cellSize = (canvas.width - 2) / gridSize;
 let playWithComputer = false;
 let currentPlayer = "black";
