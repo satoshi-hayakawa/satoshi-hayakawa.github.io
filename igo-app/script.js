@@ -398,20 +398,20 @@ function redrawBoard(territoryMap = null) {
 changeBoardSize(9);
 redrawBoard();
 
-function resizeBody() {
-  const maxHeight = window.innerHeight;
-  const maxWidth = window.innerWidth;
+// function resizeBody() {
+//   const maxHeight = window.innerHeight;
+//   const maxWidth = window.innerWidth;
 
-  document.body.style.width = `${maxWidth}px`;
-  document.body.style.height = `${maxHeight}px`;
+//   document.body.style.width = `${maxWidth}px`;
+//   document.body.style.height = `${maxHeight}px`;
 
-  const canvasSize = Math.min(maxHeight * 0.65, maxWidth * 0.9)
+//   const canvasSize = Math.min(maxHeight * 0.65, maxWidth * 0.9)
 
-  canvas.style.width = `${canvasSize}px`;
-  canvas.style.height = `${canvasSize}px`;
+//   canvas.style.width = `${canvasSize}px`;
+//   canvas.style.height = `${canvasSize}px`;
 
-  redrawBoard();
-}
+//   redrawBoard();
+// }
 
-window.addEventListener('resize', resizeBody);
-resizeBody();
+// window.addEventListener('resize', resizeBody);
+// resizeBody();
