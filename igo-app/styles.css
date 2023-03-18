@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.board {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    width: 600px;
+    height: 600px;
+    background-image: url("wood_pattern.jpg"); /* 木目調の背景画像を指定 */
+    border: 1px solid #000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cell {
+    position: relative;
+}
+
+.stone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.black {
+    background-color: #111;
+}
+
+.white {
+    background-color: #eee;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+  
+  
+#humanBtn, #computerBtn {
+    display: block;
+    margin: 0 10px;
+    flex: 1; /* ボタンの幅を均等にする */
+}
+  
+#humanBtn {
+    margin-right: 5px;
+}
+  
+#computerBtn {
+    margin-left: 5px;
+}
+  
+button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap; /* 追加 */
+}
+  
+button:hover {
+    background-color: #ddd;
+}
