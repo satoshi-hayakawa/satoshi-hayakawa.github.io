@@ -1,6 +1,6 @@
 const canvas = document.getElementById("board");
 const ctx = canvas.getContext("2d");
-let gridSize = 19;
+let gridSize = 9;
 let cellSize = (canvas.width - 2) / gridSize;
 let playWithComputer = false;
 let currentPlayer = "black";
@@ -40,7 +40,7 @@ const starPointsNine = [
 	[4, 4],[4, 10],[4, 16],[10, 4],[10, 10],[10, 16],[16, 4],[16, 10],[16, 16],
 ];
 
-let starPoints = starPointsNine
+let starPoints = [[5, 5]];
 
 // グリッドを描画
 function drawGrid() {
