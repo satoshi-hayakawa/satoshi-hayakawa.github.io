@@ -1,6 +1,6 @@
 const canvas = document.getElementById("board");
 const ctx = canvas.getContext("2d");
-let gridSize = 9;
+let gridSize = 19;
 let cellSize = (canvas.width - 2) / gridSize;
 let playWithComputer = false;
 let currentPlayer = "black";
@@ -319,8 +319,15 @@ function calculateTerritoryAndDetermineWinner() {
 		
 // クリックイベント
 canvas.addEventListener("click", (e) => {
-	const x = Math.round((e.clientX - canvas.offsetLeft - cellSize/2) / cellSize);
-	const y = Math.round((e.clientY - canvas.offsetTop - cellSize/2) / cellSize);
+
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const p = (e.clientX - rect.left) * scaleX;
+  const q = (e.clientY - rect.top) * scaleY;
+
+	const x = Math.round((p - cellSize/2) / cellSize);
+	const y = Math.round((q - cellSize/2) / cellSize);
 	
 	// 追加: クリックした位置が盤面の範囲外なら何もしない
 	if (x < 0 || x >= gridSize || y < 0 || y >= gridSize) return;
@@ -382,4 +389,5 @@ function redrawBoard(territoryMap = null) {
 
 
 // グリッドを描画
+changeBoardSize(9);
 redrawBoard();
