@@ -392,8 +392,13 @@ function redrawBoard(territoryMap = null) {
 changeBoardSize(9);
 redrawBoard();
 
+// canvas.addEventListener("click", handleInteraction);
+// // canvas.addEventListener("mousedown", handleInteraction, false);
+// // canvas.addEventListener("mouseup", handleInteraction, false)
+// canvas.addEventListener("touchstart", handleInteraction, false);
+// canvas.addEventListener("touchend", handleInteraction, false);
+
 canvas.addEventListener("click", handleInteraction);
-// canvas.addEventListener("mousedown", handleInteraction, false);
-// canvas.addEventListener("mouseup", handleInteraction, false)
+canvas.addEventListener("mouseup", handleInteraction)
+canvas.addEventListener("touchend", handleInteraction);
 canvas.addEventListener("touchstart", handleInteraction, false);
-canvas.addEventListener("touchend", handleInteraction, false);
