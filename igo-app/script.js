@@ -321,9 +321,6 @@ canvas.addEventListener('touchmove', (event) => {
   event.preventDefault();
 });
 
-canvas.addEventListener('touchend', (event) => {
-  event.preventDefault();
-});
 
 // クリックイベント
 function handleInteraction(event) {
