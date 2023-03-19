@@ -395,4 +395,4 @@ redrawBoard();
 canvas.addEventListener("click", handleInteraction);
 canvas.addEventListener("touchend", handleInteraction);
 canvas.addEventListener("mouseup", handleInteraction);
-canvas.addEventListener("touchstart", handleInteraction, false);
+//canvas.addEventListener("touchstart", handleInteraction, false);
