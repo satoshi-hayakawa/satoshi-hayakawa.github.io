@@ -326,13 +326,16 @@ canvas.addEventListener('touchend', (event) => {
 });
 
 // クリックイベント
-canvas.addEventListener("click", (e) => {
+function handleInteraction(event) {
+  event.preventDefault();
 
   const rect = canvas.getBoundingClientRect();
   const scaleX = canvas.width / rect.width;
   const scaleY = canvas.height / rect.height;
-  const p = (e.clientX - rect.left) * scaleX;
-  const q = (e.clientY - rect.top) * scaleY;
+  const clientX = event.clientX || event.touches[0].clientX;
+  const clientY = event.clientY || event.touches[0].clientY;
+  const p = (clientX - rect.left) * scaleX;
+  const q = (clientY - rect.top) * scaleY;
 
 	const x = Math.round((p - cellSize/2) / cellSize);
 	const y = Math.round((q - cellSize/2) / cellSize);
@@ -366,7 +369,10 @@ canvas.addEventListener("click", (e) => {
 	consecutivePasses = 0;
 	boardHistory.push(JSON.parse(JSON.stringify(board)))
 	redrawBoard()
-});
+}
+
+canvas.addEventListener("click", handleInteraction);
+canvas.addEventListener("touchend", handleInteraction);
 
 function redrawBoard(territoryMap = null) {
 	// 背景色を設定
@@ -397,21 +403,3 @@ function redrawBoard(territoryMap = null) {
 // グリッドを描画
 changeBoardSize(9);
 redrawBoard();
-
-// function resizeBody() {
-//   const maxHeight = window.innerHeight;
-//   const maxWidth = window.innerWidth;
-
-//   document.body.style.width = `${maxWidth}px`;
-//   document.body.style.height = `${maxHeight}px`;
-
-//   const canvasSize = Math.min(maxHeight * 0.65, maxWidth * 0.9)
-
-//   canvas.style.width = `${canvasSize}px`;
-//   canvas.style.height = `${canvasSize}px`;
-
-//   redrawBoard();
-// }
-
-// window.addEventListener('resize', resizeBody);
-// resizeBody();
