@@ -362,10 +362,6 @@ function handleInteraction(event) {
 	redrawBoard()
 }
 
-canvas.addEventListener("click", handleInteraction);
-canvas.addEventListener("touchend", handleInteraction);
-canvas.addEventListener("mouseup", handleInteraction);
-
 function redrawBoard(territoryMap = null) {
 	// 背景色を設定
   ctx.fillStyle = "#f0f0f0";
@@ -395,3 +391,8 @@ function redrawBoard(territoryMap = null) {
 // グリッドを描画
 changeBoardSize(9);
 redrawBoard();
+
+canvas.addEventListener("click", handleInteraction);
+canvas.addEventListener("touchend", handleInteraction);
+canvas.addEventListener("mouseup", handleInteraction);
+canvas.addEventListener("touchstart", handleInteraction, false);
