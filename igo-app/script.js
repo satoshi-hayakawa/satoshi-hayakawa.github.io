@@ -316,12 +316,6 @@ function calculateTerritoryAndDetermineWinner() {
   alert(`黒の陣地+アゲハマ: ${blackTerritory + blackCaptures} / 白の陣地+アゲハマ+コミ6.5: ${whiteTerritory + whiteCaptures + 6.5}\n結果: ${result}`);
 }
 
-// モバイル対策
-canvas.addEventListener('touchmove', (event) => {
-  event.preventDefault();
-});
-
-
 // クリックイベント
 function handleInteraction(event) {
   event.preventDefault();
