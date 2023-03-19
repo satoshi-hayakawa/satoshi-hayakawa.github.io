@@ -364,6 +364,7 @@ function handleInteraction(event) {
 
 canvas.addEventListener("click", handleInteraction);
 canvas.addEventListener("touchend", handleInteraction);
+canvas.addEventListener("mouseup", handleInteraction);
 
 function redrawBoard(territoryMap = null) {
 	// 背景色を設定
