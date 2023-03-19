@@ -393,7 +393,7 @@ changeBoardSize(9);
 redrawBoard();
 
 canvas.addEventListener("click", handleInteraction);
-canvas.addEventListener("mousedown", handleInteraction, false);
-canvas.addEventListener("mouseup", handleInteraction, false)
+// canvas.addEventListener("mousedown", handleInteraction, false);
+// canvas.addEventListener("mouseup", handleInteraction, false)
 canvas.addEventListener("touchstart", handleInteraction, false);
 canvas.addEventListener("touchend", handleInteraction, false);
