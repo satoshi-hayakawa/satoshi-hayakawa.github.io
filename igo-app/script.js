@@ -89,7 +89,7 @@ function drawStone(x, y, color) {
 }
 
 function drawLastMove() {
-  if (lastMoveHistory.length <= 1) return;
+  if (lastMove == null) return;
   const [x, y] = lastMove;
   ctx.beginPath();
   ctx.arc(cellSize / 2 + x * cellSize, cellSize / 2 + y * cellSize, cellSize * 0.15, 0, 2 * Math.PI);
