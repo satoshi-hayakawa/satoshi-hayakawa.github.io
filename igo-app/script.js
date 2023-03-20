@@ -9,7 +9,16 @@ let gameEndTime = 1;
 
 // アゲハマ
 let blackCaptures = 0;
+let blackCapturesHistory = [];
+blackCapturesHistory.push(JSON.parse(JSON.stringify(blackCaptures)));
 let whiteCaptures = 0;
+let whiteCapturesHistory = [];
+whiteCapturesHistory.push(JSON.parse(JSON.stringify(whiteCaptures)));
+
+// 最新の手
+let lastMove = null;
+let lastMoveHistory = [];
+lastMoveHistory.push(JSON.parse(JSON.stringify(lastMove)));
 
 // 終了判定
 let consecutivePasses = 0;
@@ -72,14 +81,20 @@ function drawStar(x, y) {
 
 // 石を描画
 function drawStone(x, y, color) {
-	if ((x<0)||(x>18)||(y<0)||(y>18)) return false;
-
 	ctx.beginPath();
 	ctx.arc((x + 0.5) * cellSize, (y + 0.5) * cellSize, cellSize * 0.45, 0, 2 * Math.PI);
 	ctx.fillStyle = color;
 	ctx.fill();
 	ctx.stroke();
-	return true;
+}
+
+function drawLastMove() {
+  if (lastMoveHistory.length <= 1) return;
+  const [x, y] = lastMove;
+  ctx.beginPath();
+  ctx.arc(cellSize / 2 + x * cellSize, cellSize / 2 + y * cellSize, cellSize * 0.15, 0, 2 * Math.PI);
+  ctx.fillStyle = "red";
+  ctx.fill();
 }
 
 let board = Array(gridSize)
@@ -100,8 +115,23 @@ function changeBoardSize(size) {
   board = Array(gridSize)
     .fill(null)
     .map(() => Array(gridSize).fill(0));
-	boardHistory = []
+	
+  // 初期化
+  boardHistory = []
 	boardHistory.push(JSON.parse(JSON.stringify(board)));
+  // アゲハマ
+  blackCaptures = 0;
+  blackCapturesHistory = [];
+  blackCapturesHistory.push(JSON.parse(JSON.stringify(blackCaptures)));
+  whiteCaptures = 0;
+  whiteCapturesHistory = [];
+  whiteCapturesHistory.push(JSON.parse(JSON.stringify(whiteCaptures)));
+
+  // 最新の手
+  lastMove = null;
+  lastMoveHistory = [];
+  lastMoveHistory.push(JSON.parse(JSON.stringify(lastMove)));
+
 	if (size === 9) starPoints = [[5, 5]];
 	else if (size === 13) starPoints = [[4, 4],[4, 10],[10, 4],[10,10]];
 	else starPoints = starPointsNine;
@@ -134,16 +164,37 @@ const resignBtn = document.getElementById("resignBtn");
 
 function undoMove() {
   if (boardHistory.length <= gameEndTime) return; // 最初の状態に戻った場合は無視。通常はgameEndTime=1
-  boardHistory.pop(); // 直近の盤面状態を削除
-  // 直接boardに代入するのではなく、新しいオブジェクトとしてコピーする
-  board = JSON.parse(JSON.stringify(boardHistory[boardHistory.length - 1]));
+  // boardHistory.pop(); // 直近の盤面状態を削除
+  // // 直接boardに代入するのではなく、新しいオブジェクトとしてコピーする
+  // board = JSON.parse(JSON.stringify(boardHistory[boardHistory.length - 1]));
+  board = undoFunc(boardHistory);
 	currentPlayer = currentPlayer === "black" ? "white" : "black";
+  blackCaptures = undoFunc(blackCapturesHistory);
+  whiteCaptures = undoFunc(whiteCapturesHistory);
+  // blackCapturesHistory.pop();
+  // blackCaptures = JSON.parse(JSON.stringify(blackCapturesHistory[blackCapturesHistory.length - 1]));
+  // whiteCapturesHistory.pop();
+  // whiteCaptures = JSON.parse(JSON.stringify(whiteCapturesHistory[whiteCapturesHistory.length - 1]));
+  updateCaptureCounts(pushCurrent=false);
+  lastMove = undoFunc(lastMoveHistory);
   redrawBoard();
 }
 
+function undoFunc(xHistory) {
+  xHistory.pop();
+  return JSON.parse(JSON.stringify(xHistory[xHistory.length - 1]));
+}
+
+function historyUpdate(x, xHistory) {
+  xHistory.push(JSON.parse(JSON.stringify(x)));
+}
+
 function passMove() {
+  boardHistory.push(JSON.parse(JSON.stringify(board)))
   currentPlayer = currentPlayer === "black" ? "white" : "black";
   updateCurrentPlayerDisplay(); // 手番表示を更新
+  updateCaptureCounts(); // アゲハマの履歴を更新
+  historyUpdate(lastMove, lastMoveHistory); // 最終手を更新
   consecutivePasses++; // 連続パスのカウントを増やす
 
   // 連続パスが2回になった場合、ゲームを終了し、勝敗を決定する
@@ -209,7 +260,11 @@ function isInAtari(x, y, color) {
   return !hasLiberties(x, y, color);
 }
 
-function updateCaptureCounts() {
+function updateCaptureCounts(pushCurrent=true) {
+  if (pushCurrent){
+    blackCapturesHistory.push(JSON.parse(JSON.stringify(blackCaptures)));
+    whiteCapturesHistory.push(JSON.parse(JSON.stringify(whiteCaptures)));
+  }
   const blackCapturesElement = document.getElementById("blackCaptures");
   const whiteCapturesElement = document.getElementById("whiteCaptures");
   blackCapturesElement.textContent = blackCaptures;
@@ -217,7 +272,7 @@ function updateCaptureCounts() {
 }
 
 		
-function captureStones(x, y, color) {
+function captureStones(x, y, color, update=true) {
   let capturedCount = 0;
   for (const [adjX, adjY] of getAdjacentCoords(x, y)) {
     if (board[adjY][adjX] === -color && isInAtari(adjX, adjY, -color)) {
@@ -228,12 +283,18 @@ function captureStones(x, y, color) {
       }
     }
   }
-  if (color === "white") {
-    whiteCaptures += capturedCount;
-  } else {
-    blackCaptures += capturedCount;
+  if (update) {
+    if (color === -1) {
+      whiteCaptures += capturedCount;
+    } else {
+      blackCaptures += capturedCount;
+    }
+    updateCaptureCounts(); // アゲハマの表示を更新
   }
-  updateCaptureCounts(); // アゲハマの表示を更新
+  else {
+    if (capturedCount > 0) return true;
+    else return false;
+  }
 }
 
 // ランダムな手を打つ
@@ -246,10 +307,28 @@ function playRandomMove() {
 		// 追加: クリックした位置が盤面の範囲外なら何もしない
 		if (x < 0 || x >= gridSize || y < 0 || y >= gridSize) continue;
 		if (board[y][x] !== 0) continue; // 既に石がある場所は無視
+
+    // 禁じ手判定
+    const prevBoard = JSON.parse(JSON.stringify(board));
+    board[y][x] = currentPlayer === "black" ? 1 : -1;
+    const captured = captureStones(x, y, currentPlayer === "black" ? 1 : -1, update=false);
+    const inAtari = isInAtari(x, y, currentPlayer === "black" ? 1 : -1);
+    if(!captured && inAtari){
+      board = prevBoard;
+      continue;
+    }
+    if (captured && boardHistory.length > 1){
+      if (sameBoard(JSON.parse(JSON.stringify(boardHistory[boardHistory.length - 2])))){
+        board = prevBoard;
+        return;
+      }
+    }
 		
 		isValid = true
 		board[y][x] = currentPlayer === "black" ? 1 : -1;
 		captureStones(x, y, currentPlayer === "black" ? 1 : -1);
+    lastMove = [x, y];
+    historyUpdate(lastMove, lastMoveHistory);
 	}
 }
 
@@ -309,6 +388,8 @@ function calculateTerritoryAndDetermineWinner() {
     }
   }
 
+  //alert(territoryMap);
+
   // Show territory on the board
   redrawBoard(territoryMap);
 
@@ -340,26 +421,63 @@ function handleInteraction(event) {
 		else blackCaptures++;
 		board[y][x] = 0;
 		boardHistory.push(JSON.parse(JSON.stringify(board)))
-		updateCaptureCounts()
-		redrawBoard()
+		updateCaptureCounts();
+    lastMove = null;
+    historyUpdate(lastMove, lastMoveHistory);
+		redrawBoard();
 		return;
 	}
 
 	if (board[y][x] !== 0) return; // 既に石がある場所は無視
 
-	if (drawStone(x, y, currentPlayer)){
-		board[y][x] = currentPlayer === "black" ? 1 : -1;
-		captureStones(x, y, currentPlayer === "black" ? 1 : -1);
-		currentPlayer = currentPlayer === "black" ? "white" : "black";
-		if (playWithComputer) {
-			redrawBoard()
-			playRandomMove();
-			currentPlayer = currentPlayer === "black" ? "white" : "black";
-		}
-	}
+  // 履歴
+  const prevBoard = JSON.parse(JSON.stringify(board));
+
+  board[y][x] = currentPlayer === "black" ? 1 : -1; // update
+
+  // 禁じ手判定
+  const captured = captureStones(x, y, currentPlayer === "black" ? 1 : -1, update=false);
+  const inAtari = isInAtari(x, y, currentPlayer === "black" ? 1 : -1);
+  if(!captured && inAtari){
+    alert("自殺手です！");
+    board = prevBoard; // 戻す
+    return;
+  }
+  if (captured && boardHistory.length > 1){
+    if (sameBoard(JSON.parse(JSON.stringify(boardHistory[boardHistory.length - 2])))){
+      board = prevBoard;
+      alert("コウです！");
+      return;
+    }
+  }
+
+  board = prevBoard;
+  board[y][x] = currentPlayer === "black" ? 1 : -1;
+  captureStones(x, y, currentPlayer === "black" ? 1 : -1);
+
+  lastMove = [x, y];
+  historyUpdate(lastMove, lastMoveHistory);
+
+  currentPlayer = currentPlayer === "black" ? "white" : "black";
+  if (playWithComputer) {
+    redrawBoard();
+    playRandomMove();
+    currentPlayer = currentPlayer === "black" ? "white" : "black";
+  }
+
 	consecutivePasses = 0;
-	boardHistory.push(JSON.parse(JSON.stringify(board)))
-	redrawBoard()
+	boardHistory.push(JSON.parse(JSON.stringify(board)));
+	redrawBoard();
+}
+
+function sameBoard(oldBoard) {
+  isSame = true;
+  for (let y = 0; y < gridSize; y++) {
+    for (let x = 0; x < gridSize; x++) {
+      if (board[y][x] !== oldBoard[y][x]) isSame = false;
+    }
+  }
+  return isSame;
 }
 
 function redrawBoard(territoryMap = null) {
@@ -385,7 +503,8 @@ function redrawBoard(territoryMap = null) {
       }
     }
   }
-	updateCurrentPlayerDisplay()
+  drawLastMove();
+	updateCurrentPlayerDisplay();
 }
 
 // グリッドを描画
@@ -399,6 +518,6 @@ redrawBoard();
 // canvas.addEventListener("touchend", handleInteraction, false);
 
 canvas.addEventListener("click", handleInteraction);
-canvas.addEventListener("mouseup", handleInteraction)
+// canvas.addEventListener("mouseup", handleInteraction);
 canvas.addEventListener("touchend", handleInteraction);
 canvas.addEventListener("touchstart", handleInteraction, false);
