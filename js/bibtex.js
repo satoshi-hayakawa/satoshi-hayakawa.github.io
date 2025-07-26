@@ -76,7 +76,7 @@ hayakawa2023hypercontractivity: `@article{hayakawa2023hypercontractivity,
 	pages={20220725},
 	year={2023}
 }`,
-hayakawa2024estimating: `@article{hayakawa2024estimating,
+hayakawa2023estimating: `@article{hayakawa2023estimating,
 	title={Estimating the probability that a given vector is in the convex hull of a random sample},
 	author={Hayakawa, Satoshi and Lyons, Terry and Oberhauser, Harald},
 	journal={Probability Theory and Related Fields},
