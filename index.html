@@ -67,6 +67,17 @@
 			Google Scholar: <a target="_blank" href="https://scholar.google.com/citations?user=2LAmh9MAAAAJ">link</a>
 		</p>
 	</header>
+
+	<div id="bibtexModal" class="bibtex-modal">
+		<div class="bibtex-modal-content">
+			<span class="bibtex-close">&times;</span>
+			<h3 id="bibtexTitle">BibTeX Citation</h3>
+			<div id="bibtexContent" class="bibtex-content"></div>
+			<div class="bibtex-actions">
+				<button id="copyButton" class="copy-button">Copy to Clipboard</button>
+			</div>
+		</div>
+	</div>
 	
 	<div id="contents">
 		<h2 id="news">News</h2>
@@ -210,6 +221,7 @@
 				</div>
 			<dd> -->
 		</dl>
+
 		<h2 id="pubs">Publications</h2>
 		<h3>International Conference Proceedings</h3>		  
 		<ol>
@@ -219,6 +231,9 @@
 				<em>Proceedings of the 42nd International Conference on Machine Learning (ICML 2025)</em>, accepted.
 				<span class="paper-links-inline">
 					<a class="paper-button" href="https://arxiv.org/abs/2410.08709" target="_blank">arXiv</a>
+					<a class="paper-button" href="https://openreview.net/forum?id=jCEl0aJpF6" target="_blank">openreview</a>
+					<a class="paper-button" href="https://github.com/sony/di4c" target="_blank">code</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2025distillation">bibtex</a>
 				</span>
 			</li>
 			<li>
@@ -226,8 +241,10 @@
 				Jump your steps: optimizing sampling schedule of discrete diffusion models,
 				<em>International Conference on Learning Representations (ICLR 2025)</em>, published online.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://arxiv.org/abs/2410.07761" target="_blank">arXiv</a>
-				<a class="paper-button" href="https://openreview.net/forum?id=pD6TiCpyDR" target="_blank">openreview</a>
+					<a class="paper-button" href="https://arxiv.org/abs/2410.07761" target="_blank">arXiv</a>
+					<a class="paper-button" href="https://openreview.net/forum?id=pD6TiCpyDR" target="_blank">openreview</a>
+					<a class="paper-button" href="https://github.com/sony/jys" target="_blank">code</a>
+					<a class="paper-button bibtex-button" data-bibtex="park2025jump">bibtex</a>
 				</span>
 			</li>
 			<li>
@@ -235,8 +252,9 @@
 				Adaptive batch sizes in active learning: a probabilistic numerics approach,
 				<em>Proceedings of the 27th International Conference on Artificial Intelligence and Statistics (AISTATS 2024)</em>, PMLR 238:496-504.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://arxiv.org/abs/2306.05843" target="_blank">arXiv</a>
-				<a class="paper-button" href="https://proceedings.mlr.press/v238/adachi24b.html" target="_blank">proceedings</a>
+					<a class="paper-button" href="https://arxiv.org/abs/2306.05843" target="_blank">arXiv</a>
+					<a class="paper-button" href="https://proceedings.mlr.press/v238/adachi24b.html" target="_blank">proceedings</a>
+					<a class="paper-button bibtex-button" data-bibtex="adachi2024adaptive">bibtex</a>
 				</span>
 			</li>
 			
@@ -245,8 +263,9 @@
 				Quantum ridgelet transform: winning lottery ticket of neural networks with quantum computation,
 				<em>Proceedings of the 40th International Conference on Machine Learning (ICML 2023)</em>, 39008-39034.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://arxiv.org/abs/2301.11936" target="_blank">arXiv</a>
-				<a class="paper-button" href="https://proceedings.mlr.press/v202/yamasaki23a.html" target="_blank">proceedings</a>
+					<a class="paper-button" href="https://arxiv.org/abs/2301.11936" target="_blank">arXiv</a>
+					<a class="paper-button" href="https://proceedings.mlr.press/v202/yamasaki23a.html" target="_blank">proceedings</a>
+					<a class="paper-button bibtex-button" data-bibtex="yamasaki2023quantum">bibtex</a>
 				</span>
 			</li>
 			
@@ -255,8 +274,9 @@
 				Sampling-based Nyström approximation and kernel quadrature,
 				<em>Proceedings of the 40th International Conference on Machine Learning (ICML 2023)</em>, 12678-12699.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://arxiv.org/abs/2301.09517" target="_blank">arXiv</a>
-				<a class="paper-button" href="https://proceedings.mlr.press/v202/hayakawa23a.html" target="_blank">proceedings</a>
+					<a class="paper-button" href="https://arxiv.org/abs/2301.09517" target="_blank">arXiv</a>
+					<a class="paper-button" href="https://proceedings.mlr.press/v202/hayakawa23a.html" target="_blank">proceedings</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2023sampling">bibtex</a>
 				</span>
 			</li>
 			
@@ -266,8 +286,10 @@
 				<em>Advances in Neural Information Processing Systems 35 (NeurIPS 2022)</em>, 16533-16547.
 				(*equal contribution)
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://arxiv.org/abs/2206.04734" target="_blank">arXiv</a>
-				<a class="paper-button" href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/697200c9d1710c2799720b660abd11bb-Abstract-Conference.html" target="_blank">proceedings</a>
+					<a class="paper-button" href="https://arxiv.org/abs/2206.04734" target="_blank">arXiv</a>
+					<a class="paper-button" href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/697200c9d1710c2799720b660abd11bb-Abstract-Conference.html" target="_blank">proceedings</a>
+					<a class="paper-button" href="https://github.com/ma921/BASQ" target="_blank">code</a>
+					<a class="paper-button bibtex-button" data-bibtex="adachi2022fast">bibtex</a>
 				</span>
 			</li>
 
@@ -276,8 +298,10 @@
 				Positively weighted kernel quadrature via subsampling,
 				<em>Advances in Neural Information Processing Systems 35 (NeurIPS 2022)</em>, 6886-6900.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://arxiv.org/abs/2107.09597" target="_blank">arXiv</a>
-				<a class="paper-button" href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/2dae7d1ccf1edf76f8ce7c282bdf4730-Abstract-Conference.html" target="_blank">proceedings</a>
+					<a class="paper-button" href="https://arxiv.org/abs/2107.09597" target="_blank">arXiv</a>
+					<a class="paper-button" href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/2dae7d1ccf1edf76f8ce7c282bdf4730-Abstract-Conference.html" target="_blank">proceedings</a>
+					<a class="paper-button" href="https://github.com/satoshi-hayakawa/kernel-quadrature" target="_blank">code</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2022positively">bibtex</a>
 				</span>
 			</li>
 		</ol>
@@ -287,64 +311,72 @@
 				<u>Satoshi Hayakawa</u>, Tetsuro Morimura. (2024).
 				Policy gradient with kernel quadrature, <em>Transactions on Machine Learning Research (ICLR 2025 journal track)</em>, published online.		
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://openreview.net/forum?id=WFI9xhJrxF" target="_blank">
-				journal</a></span>
+					<a class="paper-button" href="https://openreview.net/forum?id=WFI9xhJrxF" target="_blank">journal</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2024policy">bibtex</a>
+				</span>
 			</li>
 			<li>
 				<u>Satoshi Hayakawa</u> and Ken'ichiro Tanaka. (2024).
 				Convergence analysis of approximation formulas for analytic functions via duality for potential energy minimization,
 				<em>Japan Journal of Industrial and Applied Mathematics</em>, 41, 105-127.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://link.springer.com/article/10.1007/s13160-023-00588-5" target="_blank">
-				journal</a></span>
+					<a class="paper-button" href="https://link.springer.com/article/10.1007/s13160-023-00588-5" target="_blank">journal</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2024convergence">bibtex</a>
+				</span>
 			</li>
 			<li>
 				<u>Satoshi Hayakawa</u>, Harald Oberhauser and Terry Lyons. (2023).
 				Hypercontractivity meets random convex hulls: analysis of randomized multivariate cubatures,
 				<em>Proceedings of the Royal Society A</em>, 479(2273), 20220725. 
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://royalsocietypublishing.org/doi/10.1098/rspa.2022.0725" target="_blank">
-				journal</a></span>
+					<a class="paper-button" href="https://royalsocietypublishing.org/doi/10.1098/rspa.2022.0725" target="_blank">journal</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2023hypercontractivity">bibtex</a>
+				</span>
 			</li>
 			<li>
 				<u>Satoshi Hayakawa</u>, Terry Lyons and Harald Oberhauser. (2023).
 				Estimating the probability that a given vector is in the convex hull of a random sample,
 				<em>Probability Theory and Related Fields</em>, 185, 705-746.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://link.springer.com/article/10.1007/s00440-022-01186-1" target="_blank">
-				journal</a></span>
+					<a class="paper-button" href="https://link.springer.com/article/10.1007/s00440-022-01186-1" target="_blank">journal</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2023estimating">bibtex</a>
+				</span>
 			</li>
 			<li>
 				<u>Satoshi Hayakawa</u> and Ken'ichiro Tanaka. (2022).
 				Monte Carlo construction of cubature on Wiener space,
 				<em>Japan Journal of Industrial and Applied Mathematics</em>, 39(2), 543-571.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://link.springer.com/article/10.1007/s13160-021-00496-6" target="_blank">
-				journal</a></span>
+					<a class="paper-button" href="https://link.springer.com/article/10.1007/s13160-021-00496-6" target="_blank">journal</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2022monte">bibtex</a>
+				</span>
 			</li>
 			<li>
 				<u>Satoshi Hayakawa</u>. (2021).
 				Monte Carlo cubature construction,
 				<em>Japan Journal of Industrial and Applied Mathematics</em>, 38(2), 561-577.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://link.springer.com/article/10.1007/s13160-020-00451-x" target="_blank">
-				journal</a></span>
+					<a class="paper-button" href="https://link.springer.com/article/10.1007/s13160-020-00451-x" target="_blank">journal</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2021monte">bibtex</a>
+				</span>
 			</li>
 			<li>
 				<u>Satoshi Hayakawa</u> and Ken'ichiro Tanaka. (2020).
 				Error bounds of potential theoretic numerical integration formulas in weighted Hardy spaces,
 				<em>JSIAM Letters</em>, 12, 21-24.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://www.jstage.jst.go.jp/article/jsiaml/12/0/12_21/_article/-char/en/" target="_blank">
-				journal</a></span>
+					<a class="paper-button" href="https://www.jstage.jst.go.jp/article/jsiaml/12/0/12_21/_article/-char/en/" target="_blank">journal</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2020error">bibtex</a>
+				</span>
 			</li>
 			<li>
 				<u>Satoshi Hayakawa</u> and Taiji Suzuki. (2020).
 				On the minimax optimality and superiority of deep neural network learning over sparse parameter spaces,
 				<em>Neural Networks</em>, 123, 343-361.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://www.sciencedirect.com/science/article/pii/S089360801930406X">
-				journal</a></span>
+					<a class="paper-button" href="https://www.sciencedirect.com/science/article/pii/S089360801930406X">journal</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2020minimax">bibtex</a>
+				</span>
 			</li>
 			<li>
 				Hisashi Hayakawa, Yusuke Ebihara, David P Hand,
@@ -352,8 +384,9 @@
 				Low-latitude Aurorae during the Extreme Space Weather Events in 1859,
 				<em>The Astrophysical Journal</em>, 869(1), 57.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://iopscience.iop.org/article/10.3847/1538-4357/aae47c/meta">
-				journal</a></span>
+					<a class="paper-button" href="https://iopscience.iop.org/article/10.3847/1538-4357/aae47c/meta">journal</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2018low">bibtex</a>
+				</span>
 			</li>
 			<li>
 				Hisashi Hayakawa, Yusuke Ebihara, Jos&eacute; M Vaquero, Kentaro Hattori, V&iacute;ctor MS Carrasco, Mar&iacute;a de la Cruz Gallego,
@@ -361,8 +394,9 @@
 				A great space weather event in February 1730,
 				<em>Astronomy &amp; Astrophysics</em>, 616, A177.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://www.aanda.org/articles/aa/abs/2018/08/aa32735-18/aa32735-18.html">
-				journal</a></span>
+					<a class="paper-button" href="https://www.aanda.org/articles/aa/abs/2018/08/aa32735-18/aa32735-18.html">journal</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2018great">bibtex</a>
+				</span>
 			</li>
 			<li>
 				Hisashi Hayakawa, Yusuke Ebihara, David M. Willis, Kentaro Hattori, Alessandra S. Giunta, Matthew N. Wild,
@@ -371,8 +405,9 @@
 				The Great Space Weather Event during 1872 February Recorded in East Asia,
 				<em>The Astrophysical Journal</em>, 862(1), 15.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://iopscience.iop.org/article/10.3847/1538-4357/aaca40/meta">
-				journal</a></span>
+					<a class="paper-button" href="https://iopscience.iop.org/article/10.3847/1538-4357/aaca40/meta">journal</a>
+					<a class="paper-button bibtex-button" data-bibtex="hayakawa2018great2">bibtex</a>
+				</span>
 			</li>
 		</ol>
 		<h3>Workshops</h3>
@@ -382,8 +417,10 @@
 				Partial alignment of representations via interventional consistency,
 				<em>ICLR 2025 Workshop on Representational Alignment</em>.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://openreview.net/forum?id=eimAJqoIWt" target="_blank">
-				openreview</a></span>
+					<a class="paper-button" href="https://openreview.net/forum?id=eimAJqoIWt" target="_blank">openreview</a>
+					<a class="paper-button" href="https://github.com/sony/alice" target="_blank">code</a>
+					<a class="paper-button bibtex-button" data-bibtex="leeb2025partial">bibtex</a>
+				</span>
 			</li>
 			<li>
 				Masaki Adachi, <u>Satoshi Hayakawa</u>, Saad Hamid, Martin Jørgensen, Harald Oberhauser, Michael A
@@ -391,22 +428,33 @@
 				SOBER: highly parallel Bayesian optimization and Bayesian quadrature over discrete and mixed spaces,
 				<em>ICML 2023 Workshop on Sampling and Optimization in Discrete Space</em>.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://arxiv.org/abs/2301.11832" target="_blank">
-				arXiv</a></span>
+					<a class="paper-button" href="https://arxiv.org/abs/2301.11832" target="_blank">arXiv</a>
+					<a class="paper-button" href="https://github.com/ma921/SOBER" target="_blank">code</a>
+					<a class="paper-button bibtex-button" data-bibtex="adachi2023sober">bibtex</a>
+			</span>
 			</li>
 		</ol>
 		<h3>Preprints</h3>
 		<ol>
 			<li>
+				Yonghyun Park, Chieh-Hsin Lai, <u>Satoshi Hayakawa</u>, Yuhta Takida, Naoki Murata, Wei-Hsiang Liao, Woosung Choi, Kin Wai Cheuk, Junghyun Koo, Yuki Mitsufuji. (2025).
+				Concept-TRAK: Understanding how diffusion models learn concepts through concept-level attribution.
+				<span class="paper-links-inline">
+					<a class="paper-button" href="https://arxiv.org/abs/2507.06547" target="_blank">arXiv</a>
+					<a class="paper-button bibtex-button" data-bibtex="park2025concept">bibtex</a>
+				</span>
+			</li>
+			<li>
 				Masaki Adachi, <u>Satoshi Hayakawa</u>, Martin Jørgensen, Saad Hamid, Harald Oberhauser, Michael A
 				Osborne. (2024).
 				A quadrature approach for general-purpose batch Bayesian optimization via probabilistic lifting.
 				<span class="paper-links-inline">
-				<a class="paper-button" href="https://arxiv.org/abs/2404.12219" target="_blank">
-				arXiv</a></span>
+					<a class="paper-button" href="https://arxiv.org/abs/2404.12219" target="_blank">arXiv</a>
+					<a class="paper-button" href="https://github.com/ma921/SOBER" target="_blank">code</a>
+					<a class="paper-button bibtex-button" data-bibtex="adachi2024quadrature">bibtex</a>
+				</span>
 			</li>
 		</ol>
-
 		<h2 id="talks">Talks</h2>
 		<h3>English</h3>
 		<ol>
@@ -662,6 +710,11 @@
 			</li>
 		</ul>
 	</div><!-- /.contents -->
+	<script src="js/bibtex.js"></script>
+	<script>
+      fetch("./publications.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#publications-section").innerHTML = data);
+    </script>
 </body>
-
 </html>
