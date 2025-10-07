@@ -168,7 +168,18 @@ adachi2024quadrature: `@article{adachi2024quadrature,
 	journal={arXiv preprint arXiv:2404.12219},
 	year={2024}
 }`,
-};
+hayakawa2025demystifying: `@article{hayakawa2025demystifying,
+	title={Demystifying MaskGIT sampler and beyond: adaptive order selection in masked diffusion},
+	author={Hayakawa, Satoshi and Takida, Yuhta and Imaizumi, Masaaki and Wakaki, Hiromi and Mitsufuji, Yuki},
+	journal={arXiv preprint arXiv:2510.04525},
+	year={2025}
+}`,
+takida2025sona: `@inproceedings{takida2025sona,
+	title={SONA: learning conditional, unconditional, and mismatching-aware discriminator},
+	author={Takida, Yuhta and Hayakawa, Satoshi and Shibuya, Takashi and Imaizumi, Masaaki and Murata Naoki and Nguyen Bac and Uesaka, Toshimitsu and Lai Chieh-Hsin and Mitsufuji, Yuki},
+	journal={arXiv preprint arXiv:2510.04576},
+	year={2025}
+}`,
 
 		// モーダル要素の取得
 		const modal = document.getElementById('bibtexModal');
