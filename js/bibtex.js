@@ -180,6 +180,12 @@ takida2025sona: `@inproceedings{takida2025sona,
 	journal={arXiv preprint arXiv:2510.04576},
 	year={2025}
 }`,
+yoshida2025theoretical: `@inproceedings{yoshida2025theoretical,
+	title={Theoretical refinement of CLIP by utilizing linear structure of optimal similarity},
+	author={Yoshida, Naoki and Hayakawa, Satoshi and Takida, Yuhta and Uesaka, Toshimitsu and Wakaki, Hiromi and Mitsufuji, Yuki},
+	journal={arXiv preprint arXiv:2510.15508},
+	year={2025}
+}`,
 
 		// モーダル要素の取得
 		const modal = document.getElementById('bibtexModal');
