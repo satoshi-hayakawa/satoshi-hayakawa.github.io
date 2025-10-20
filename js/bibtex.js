@@ -186,7 +186,7 @@ yoshida2025theoretical: `@inproceedings{yoshida2025theoretical,
 	journal={arXiv preprint arXiv:2510.15508},
 	year={2025}
 }`,
-
+};
 		// モーダル要素の取得
 		const modal = document.getElementById('bibtexModal');
 		const modalTitle = document.getElementById('bibtexTitle');
