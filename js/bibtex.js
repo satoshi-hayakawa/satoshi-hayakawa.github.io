@@ -169,22 +169,28 @@ adachi2024quadrature: `@article{adachi2024quadrature,
 	year={2024}
 }`,
 hayakawa2025demystifying: `@article{hayakawa2025demystifying,
-	title={Demystifying MaskGIT sampler and beyond: adaptive order selection in masked diffusion},
+	title={Demystifying {MaskGIT} sampler and beyond: adaptive order selection in masked diffusion},
 	author={Hayakawa, Satoshi and Takida, Yuhta and Imaizumi, Masaaki and Wakaki, Hiromi and Mitsufuji, Yuki},
 	journal={arXiv preprint arXiv:2510.04525},
 	year={2025}
 }`,
-takida2025sona: `@inproceedings{takida2025sona,
-	title={SONA: learning conditional, unconditional, and mismatching-aware discriminator},
+takida2025sona: `@article{takida2025sona,
+	title={{SONA}: learning conditional, unconditional, and mismatching-aware discriminator},
 	author={Takida, Yuhta and Hayakawa, Satoshi and Shibuya, Takashi and Imaizumi, Masaaki and Murata Naoki and Nguyen Bac and Uesaka, Toshimitsu and Lai Chieh-Hsin and Mitsufuji, Yuki},
 	journal={arXiv preprint arXiv:2510.04576},
 	year={2025}
 }`,
-yoshida2025theoretical: `@inproceedings{yoshida2025theoretical,
-	title={Theoretical refinement of CLIP by utilizing linear structure of optimal similarity},
+yoshida2025theoretical: `@article{yoshida2025theoretical,
+	title={Theoretical refinement of {CLIP} by utilizing linear structure of optimal similarity},
 	author={Yoshida, Naoki and Hayakawa, Satoshi and Takida, Yuhta and Uesaka, Toshimitsu and Wakaki, Hiromi and Mitsufuji, Yuki},
 	journal={arXiv preprint arXiv:2510.15508},
 	year={2025}
+}`,
+wu2025mca: `@article{wu2025mca,
+  title={{MCA}: modality composition awareness for robust composed multimodal retrieval},
+  author={Wu, Qiyu and Cui, Shuyang and Hayakawa, Satoshi and Wang, Wei-Yao and Wakaki, Hiromi and Mitsufuji, Yuki},
+  journal={arXiv preprint arXiv:2510.15543},
+  year={2025}
 }`,
 };
 		// モーダル要素の取得
