@@ -156,11 +156,11 @@ adachi2023sober: `@inproceedings{adachi2023sober,
 	booktitle={ICML Workshop on Sampling and Optimization in Discrete Space},
 	year={2023}
 }`,
-park2025concept: `@article{park2025concept,
+park2026concept: `@article{park2026concept,
 	title={Concept-{TRAK}: Understanding how diffusion models learn concepts through concept-level attribution},
 	author={Park, Yonghyun and Lai, Chieh-Hsin and Hayakawa, Satoshi and Takida, Yuhta and Murata, Naoki and Liao, Wei-Hsiang and Choi, Woosung and Cheuk, Kin Wai and Koo, Junghyun and Mitsufuji, Yuki},
-	journal={arXiv preprint arXiv:2507.06547},
-	year={2025}
+	booktitle={Proceedings of the 14th International Conference on Learning Representations},
+	year={2026}
 }`,
 adachi2024quadrature: `@article{adachi2024quadrature,
 	title={A quadrature approach for general-purpose batch Bayesian optimization via probabilistic lifting},
@@ -174,11 +174,11 @@ hayakawa2025demystifying: `@article{hayakawa2025demystifying,
 	journal={arXiv preprint arXiv:2510.04525},
 	year={2025}
 }`,
-takida2025sona: `@article{takida2025sona,
+takida2026sona: `@inproceedings{takida2026sona,
 	title={{SONA}: learning conditional, unconditional, and mismatching-aware discriminator},
 	author={Takida, Yuhta and Hayakawa, Satoshi and Shibuya, Takashi and Imaizumi, Masaaki and Murata Naoki and Nguyen Bac and Uesaka, Toshimitsu and Lai Chieh-Hsin and Mitsufuji, Yuki},
-	journal={arXiv preprint arXiv:2510.04576},
-	year={2025}
+	booktitle={Proceedings of the 14th International Conference on Learning Representations},
+	year={2026}
 }`,
 yoshida2025theoretical: `@article{yoshida2025theoretical,
 	title={Theoretical refinement of {CLIP} by utilizing linear structure of optimal similarity},
