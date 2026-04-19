@@ -168,11 +168,11 @@ adachi2024quadrature: `@article{adachi2024quadrature,
 	journal={arXiv preprint arXiv:2404.12219},
 	year={2024}
 }`,
-hayakawa2025demystifying: `@article{hayakawa2025demystifying,
+hayakawa2026demystifying: `@article{hayakawa2026demystifying,
 	title={Demystifying {MaskGIT} sampler and beyond: adaptive order selection in masked diffusion},
 	author={Hayakawa, Satoshi and Takida, Yuhta and Imaizumi, Masaaki and Wakaki, Hiromi and Mitsufuji, Yuki},
-	journal={arXiv preprint arXiv:2510.04525},
-	year={2025}
+	journal={Transactions on Machine Learning Research},
+	year={2026}
 }`,
 takida2026sona: `@inproceedings{takida2026sona,
 	title={{SONA}: learning conditional, unconditional, and mismatching-aware discriminator},
