@@ -461,7 +461,7 @@ const PUBLICATIONS = [
   {
     authors: "Hisashi Hayakawa, Yusuke Ebihara, David P Hand, Satoshi Hayakawa, Sandeep Kumar, Shyamoli Mukherjee and B Veenadhari",
     year: 2018,
-    title: "Low-latitude Aurorae during the Extreme Space Weather Events in 1859.",
+    title: "Low-latitude aurorae during the extreme space weather events in 1859.",
     venue: "The Astrophysical Journal",
     details: "869(1), 57",
     tags: ["journal"],
@@ -502,7 +502,7 @@ const PUBLICATIONS = [
   {
     authors: "Hisashi Hayakawa, Yusuke Ebihara, David M. Willis, Kentaro Hattori, Alessandra S. Giunta, Matthew N. Wild, Satoshi Hayakawa, Shin Toriumi, Yasuyuki Mitsuma, Lee T. Macdonald, Kazunari Shibata, and Sam M. Silverman",
     year: 2018,
-    title: "The Great Space Weather Event during 1872 February Recorded in East Asia.",
+    title: "The great space weather event during 1872 February recorded in East Asia.",
     venue: "The Astrophysical Journal",
     details: "862(1), 15",
     tags: ["journal"],
