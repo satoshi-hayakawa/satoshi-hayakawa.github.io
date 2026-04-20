@@ -263,12 +263,15 @@ dd {
 }
 
 .paper-links-inline {
-  display: inline;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28em;
   margin-left: 0.45em;
+  vertical-align: middle;
 }
 
 .paper-links-inline .paper-button {
-  margin-left: 0.28em;
+  margin-left: 0;
 }
 
 /* ================================================
