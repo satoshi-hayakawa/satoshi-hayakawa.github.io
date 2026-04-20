@@ -161,7 +161,67 @@ function setupFilter() {
   updatePublicationVisibility(activeFilters);
 }
 
+function getPageLang() {
+  return document.documentElement.lang === "ja" ? "ja" : "en";
+}
+
+function renderNewsItem(item, lang, hidden) {
+  const body = item[lang];
+  const hiddenClass = hidden ? " hidden-news older-news" : "";
+  const highlightClass = item.highlight ? "news-highlight" : "";
+
+  const itemsHtml = Array.isArray(body.items) && body.items.length > 0
+    ? `<ul class="news-sublist">${body.items.map(x => `<li>${x}</li>`).join("")}</ul>`
+    : "";
+
+  return `
+    <dt class="${hiddenClass.trim()}"><span>${item.date}</span></dt>
+    <dd class="${hiddenClass.trim()}">
+      <div class="${highlightClass}">
+        <p>${body.text}</p>
+        ${itemsHtml}
+      </div>
+    </dd>
+  `;
+}
+
+function renderNews() {
+  const list = document.getElementById("newsList");
+  const button = document.getElementById("toggleNewsButton");
+  if (!list || typeof NEWS === "undefined") return;
+
+  const lang = getPageLang();
+  const initiallyVisible = 5;
+
+  list.innerHTML = NEWS.map((item, idx) => renderNewsItem(item, lang, idx >= initiallyVisible)).join("");
+
+  const hiddenItems = document.querySelectorAll(".older-news");
+  if (!button) return;
+
+  const labels = {
+    en: { open: "Show older news", close: "Hide older news" },
+    ja: { open: "過去のニュースを表示", close: "過去のニュースを隠す" }
+  };
+
+  if (hiddenItems.length === 0) {
+    button.style.display = "none";
+    return;
+  }
+
+  let expanded = false;
+  button.textContent = labels[lang].open;
+
+  button.addEventListener("click", () => {
+    expanded = !expanded;
+    hiddenItems.forEach(el => {
+      el.classList.toggle("hidden-news", !expanded);
+    });
+    button.textContent = expanded ? labels[lang].close : labels[lang].open;
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  renderNews();
   renderPublications();
   setupFilter();
 });
