@@ -1,531 +1,447 @@
 @charset "UTF-8";
 
-/*================================================
- *  CSSリセット
- ================================================*/
-html,s,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;font-weight:normal;}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+/* ================================================
+   Reset
+================================================ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
 
-/*================================================
- *  一般・共通設定
- ================================================*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ================================================
+   Base
+================================================ */
 :root {
-	--primary: #3498db;
-	--accent: #e67e22;
-	--text-dark: #2c3e50;
-	--border-light: #ccc;
+  --primary: #3498db;
+  --primary-dark: #2c80b9;
+  --accent: #d97706;
+  --accent-blue: #2a6f97;
+  --text-dark: #2c3e50;
+  --text-mid: #556270;
+  --border-light: #d9e1e8;
+  --bg-soft: #f8fbfd;
+  --bg-chip: #f4f7fa;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-	font-size:16px;
-	/* font-family:"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif; */
-	font-family: 'Noto Sans JP', sans-serif;
-	line-height:1.6;
-}
-
-.profile-image {
-	float: right;
-	width: 25%;
-	pointer-events: none;
-}
-
-.profile-image img {
-	display: block;
-	width: 90%;
-	height: auto;
-}
-
-div {
-	clear:both;
-}
-
-#contents {
-	/* width:780px;
-	margin:0 auto; */
-	max-width: 960px; margin: auto; padding: 0 1rem;
-}
-
-header {
-	/* width:780px;
-	margin:0 auto; */
-	max-width: 960px; margin: auto; padding: 0 1rem;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: all 0.2s ease;
-}
-
-a:hover {
-    color: #0056b3;
-    border-bottom: 1px solid #0056b3;
-}
-
-h1 {
-	font-size:28px;
-	line-height:1.4;
-}
-
-h2 {
-	margin-bottom:0.5em;
-	font-size:24px;
-	color: var(--primary);
-	border-bottom:3px solid var(--border-light);
-}
-
-h3 {
-	margin-bottom:0.25em;
-	font-size:18px;
-}
-h3:before {
-	content:"\002714\00a0";
-	color: var(--primary);
-}
-
-h4 {
-	margin-bottom:0.25em;
-	font-size:16px;
-}
-h4:before {
-	content:"\00ab";
-}
-h4:after {
-	content:"\00bb";
-}
-
-h5 {
-	margin-bottom:0.25em;
-	padding:2px;
-	font-size:16px;
-	border-top:1px dotted #ddd;
-	border-bottom:1px dotted #ddd;
-	background:#f3f3f3;
-}
-
-h6 {
-	margin-bottom:0.25em;
-	padding-left:5px;
-	font-size:16px;
-	border-left:5px solid #cf0c0c;
-}
-
-p {
-	margin:0 0 1em 0;
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.7;
+  color: var(--text-dark);
+  background: #fff;
 }
 
 img {
-	vertical-align:bottom;
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
 }
 
-/* em {
-	font-weight:bold;
-} */
-
-strong {
-	font-weight:bold;
-	color:var(--accent);
+a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-pre {
-	margin:1em 0;
-	padding:1em;
-}
-
-blockquote {
-	margin-bottom:1em;
-	padding:1em;
-	border:1px dotted #ddd;
-	border-left:5px solid #ddd;
-}
-
-ul,ol,dl {
-	margin:0 0 1em 0;
-}
-ul li {
-	list-style:disc;
-}
-ol li {
-	list-style:decimal;
-}
-li {
-	margin-left:2em;
-}
-
-dt {
-	margin-bottom:0.5em;
-	border-bottom:1px dotted #ddd;
-}
-dt:before {
-	content:"\0025a0";
-}
-dd {
-	margin-bottom:1em;
-}
-
-table {
-	width:100%;
-	margin-bottom:1em;
-	border-collapse:collapse;
-	border:1px solid #ddd;
-}
-th {
-	padding:10px;
-	text-align:center;
-	vertical-align:middle;
-	border:1px solid #ddd;
-	background:#95bbc6;
-}
-td {
-	padding:10px;
-	text-align:left;
-	border:1px solid #ddd;
-}
-
-/*================================================
- *  汎用クラス
- ================================================*/
-.list {
-	padding:0 0 0 2em;
-}
-
-.list li {
-	margin:0;
-	padding:0;
-	list-style:none;
-	text-indent:-1.3em;
-}
-.list li:before {
-	content:"\002605\00a0";
-	color:#ffc720;
-}
-
-.temp {
-	clear:both;
-	overflow:hidden;
-	margin-bottom:50px;
-}
-
-.img {
-	float:left;
-	width:300px;
-}
-
-.text {
-	float:right;
-	width:450px;
-}
-
-.photo {
-	margin:20px 0;
-	padding:10px;
-	box-shadow:rgba(113, 135, 164, 0.8) 0 3px 15px 0;
-	background:#fff;
-}
-
-.photo img {
-	max-width:100%;
-}
-
-.paper {
-	margin-bottom: 2rem;
-	/* color: #ccc; */
-	font-family: 'Noto Sans JP', sans-serif;
-}
-
-.paper-meta {
-	margin-bottom: 0.5rem;
-}
-
-.paper-icon {
-	width: 16px;
-	vertical-align: middle;
-	margin-right: 6px;
-}
-
-.paper-links {
-	display: flex;
-	gap: 0.5rem;
-	flex-wrap: wrap;
-}
-
-.paper-button {
-	padding: 0.2rem 0.7rem;
-	border: 1px solid #3498db;
-	border-radius: 5px;
-	text-decoration: none;
-	color: #3498db;
-	font-size: 0.85rem;
-	transition: all 0.2s ease;
-}
-
-.paper-button:hover {
-	background: #3498db;
-	color: white;
-}
-
-.paper-links-inline {
-	display: inline;
-	margin-left: 0.5em;
-  }
-  
-  .paper-links-inline .paper-button {
-	display: inline-block;
-	font-size: 0.75rem;
-	padding: 0.1rem 0.4rem;
-	margin-left: 0.3em;
-	border: 1px solid #3498db;
-	border-radius: 4px;
-	color: #3498db;
-	text-decoration: none;
-	transition: background 0.2s ease;
-  }
-  
-  .paper-links-inline .paper-button:hover {
-	background: #3498db;
-	color: #fff;
-  }
-
-	.bibtex-modal {
-		display: none;
-		position: fixed;
-		z-index: 1000;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.5);
-	}
-
-	.bibtex-modal-content {
-		background-color: #fefefe;
-		margin: 10% auto;
-		padding: 20px;
-		border: 1px solid #888;
-		border-radius: 8px;
-		width: 80%;
-		max-width: 700px;
-		max-height: 70vh;
-		overflow-y: auto;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-	}
-
-	.bibtex-close {
-		color: #aaa;
-		float: right;
-		font-size: 28px;
-		font-weight: bold;
-		cursor: pointer;
-		line-height: 1;
-	}
-
-	.bibtex-close:hover,
-	.bibtex-close:focus {
-		color: #000;
-	}
-
-	.bibtex-content {
-		background-color: #f9f9f9;
-		border: 1px solid #ddd;
-		border-radius: 4px;
-		padding: 15px;
-		font-family: 'Courier New', monospace;
-		font-size: 14px;
-		white-space: pre-wrap;
-		word-wrap: break-word;
-		margin: 15px 0;
-		max-height: 300px;
-		overflow-y: auto;
-	}
-
-	.bibtex-actions {
-		text-align: right;
-		margin-top: 15px;
-	}
-
-	.copy-button {
-		background-color: #4CAF50;
-		color: white;
-		padding: 8px 16px;
-		border: none;
-		border-radius: 4px;
-		cursor: pointer;
-		font-size: 14px;
-		transition: background-color 0.2s;
-	}
-
-	.copy-button:hover {
-		background-color: #45a049;
-	}
-
-	.copy-button.copied {
-		background-color: #2196F3;
-	}
-
-	/* レスポンシブ対応 */
-	@media (max-width: 768px) {
-		.bibtex-modal-content {
-			width: 95%;
-			margin: 5% auto;
-			padding: 15px;
-		}
-		
-		.bibtex-content {
-			font-size: 12px;
-		}
-	}
-  
-
-/*================================================
- *  ヘッダー
- ================================================*/
-header {
-	margin-top:30px;
-	margin-bottom:50px;
-}
-header h1 {
-	margin-bottom:30px;
-}
-h1 span {
-	font-size:12px;
-}
-
-/*================================================
- *  グローバルナビゲーション
- ================================================*/
-nav {
-	width:100%;
-	position:fixed;
-	top:0;
-	left:0;
-	padding:5px 0;
-	opacity:0.8;
-	background:#000;
-	z-index:10;
-}
-nav ul {
-	position:relative;
-	float:left;
-	left:50%;
-	margin:0;
-}
-nav li {
-	position:relative;
-	left:-50%;
-	float:left;
-	list-style:none;
-	margin:0;
-	padding:0 20px;
-}
-nav li a {
-	color:#fff;
-	text-decoration:none;
-}
-nav li a:hover {
-	color:#dfdfdf;
-	text-decoration:underline;;
-}
-
-/*================================================
- *  メイン
- ================================================*/
-section {
-	margin-bottom:100px;
-}
-
-/*================================================
- *  フッター
- ================================================*/
-footer {
-	clear:both;
-	padding:20px 0;
-	font-size:11px;
-	text-align:center;
-}
-
-/*================================================
- *  ページトップへの戻り
- ================================================*/
-.totop {
-	position:fixed;
-	bottom:15px;
-	right:15px;
-}
-.totop a {
-	display:block;
-	text-decoration:none;
-}
-.totop img {
-	background:#000;
-}
-.totop img:hover {
-	background:#333;
-}
-
-/*================================================
- *  タブレット/スマートフォン向けデザイン
- ================================================*/
-/* スクロールバーを考慮して20px大きいサイズで切り替え */
-@media screen and (max-width:979px) {
-	body {
-		box-sizing:border-box;
-		width:100%;
-		padding:0 10px;
-	}
-
-	#contents {
-		width:100%;
-	}
-
-	header {
-		width:100%;
-	}
-
+a:hover {
+  color: var(--primary-dark);
+  border-bottom-color: var(--primary-dark);
 }
 
 strong {
-  font-weight: bold;
+  font-weight: 700;
   color: #000;
 }
 
+em {
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+/* ================================================
+   Layout
+================================================ */
+header,
+#contents {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+#contents {
+  padding-bottom: 40px;
+}
+
+.profile-image {
+  float: right;
+  width: 25%;
+  pointer-events: none;
+}
+
+.profile-image img {
+  display: block;
+  width: 90%;
+  margin-left: auto;
+}
+
+/* clearfix for containers that include floated image */
+header::after,
+#contents::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ================================================
+   Headings
+================================================ */
+h1 {
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+h2 {
+  margin: 2rem 0 0.6rem 0;
+  padding-bottom: 0.15rem;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  border-bottom: 3px solid var(--border-light);
+}
+
+h3 {
+  margin: 0.2rem 0 0.4rem 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h3::before {
+  content: "\2714\00a0";
+  color: var(--primary);
+}
+
+/* ================================================
+   Lists / definition lists
+================================================ */
+ul,
+ol,
+dl {
+  margin: 0 0 1em 0;
+}
+
+ul {
+  list-style: none;
+}
+
+ol {
+  padding-left: 1.6em;
+}
+
+ol > li {
+  margin-bottom: 0.85em;
+}
+
+ul li {
+  list-style: disc;
+  margin-left: 1.5em;
+}
+
+dt {
+  margin-bottom: 0.45em;
+  border-bottom: 1px dotted #ddd;
+}
+
+dt::before {
+  content: "\25A0";
+  margin-right: 0.2em;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+
+/* ================================================
+   News
+================================================ */
+.news dt {
+  border-bottom: none;
+  margin-bottom: 0.15rem;
+}
+
+.news dt::before {
+  content: "";
+  margin-right: 0;
+}
+
+.news dt span {
+  display: inline-block;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  background: var(--bg-chip);
+  color: var(--text-mid);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.news dd {
+  margin-bottom: 0.95rem;
+}
+
+.news dd > div {
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #e7edf3;
+  border-left: 4px solid var(--primary);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.news-highlight {
+  border-left-color: var(--accent) !important;
+}
+
+/* ================================================
+   Publication links / buttons
+================================================ */
+.paper-button {
+  display: inline-block;
+  padding: 0.12rem 0.48rem;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  color: var(--primary);
+  background: #fff;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.paper-button:hover {
+  background: var(--primary);
+  color: #fff;
+  border-bottom-color: var(--primary);
+}
+
+.paper-links-inline {
+  display: inline;
+  margin-left: 0.45em;
+}
+
+.paper-links-inline .paper-button {
+  margin-left: 0.28em;
+}
+
+/* ================================================
+   Publication filter
+================================================ */
+.filter-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.9rem 0 0.6rem 0;
+}
+
+.filter-chip {
+  border: 1px solid #ccd6df;
+  background: #fff;
+  color: var(--text-dark);
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.filter-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-chip.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+#filterResultNote {
+  margin: 0.2rem 0 0.9rem 0;
+  color: var(--text-mid);
+  font-size: 0.92rem;
+}
+
+/* ================================================
+   Certification labels
+================================================ */
 .label-featured {
-  color: #d97706;
+  color: var(--accent);
   font-weight: 600;
 }
 
 .label-j2c {
-  color: #2a6f97;
+  color: var(--accent-blue);
   font-weight: 600;
 }
 
-.filter-toolbar {
-  margin: 1em 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+/* ================================================
+   BibTeX modal
+================================================ */
+.bibtex-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.filter-chip {
-  border: 1px solid #ccc;
-  background: white;
-  padding: 0.2rem 0.6rem;
-  border-radius: 999px;
+.bibtex-modal-content {
+  background-color: #fff;
+  margin: 8vh auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: min(92%, 700px);
+  max-height: 78vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bibtex-close {
+  float: right;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
   cursor: pointer;
-  font-size: 0.9rem;
 }
 
-.filter-chip.active {
-  background: #3498db;
-  color: white;
-  border-color: #3498db;
+.bibtex-close:hover,
+.bibtex-close:focus {
+  color: #000;
 }
 
-#filterResultNote {
-  margin: 0.4em 0 0.8em 0;
-  color: #555;
+.bibtex-content {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 15px 0;
+  max-height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
 }
 
-#publicationList li {
-  margin-bottom: 0.8em;
+.bibtex-actions {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.copy-button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.copy-button:hover {
+  background-color: #45a049;
+}
+
+.copy-button.copied {
+  background-color: #2196F3;
+}
+
+/* ================================================
+   Responsive
+================================================ */
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  header,
+  #contents {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .profile-image {
+    float: none;
+    width: min(220px, 72%);
+    margin: 0 auto 1rem auto;
+  }
+
+  .profile-image img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .bibtex-modal-content {
+    margin: 5vh auto;
+    padding: 15px;
+    width: 95%;
+  }
+
+  .bibtex-content {
+    font-size: 12px;
+  }
 }
