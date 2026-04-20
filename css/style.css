@@ -23,10 +23,16 @@ body {
 	line-height:1.6;
 }
 
-s {
-	float:right;
-	width:25%;
+.profile-image {
+	float: right;
+	width: 25%;
 	pointer-events: none;
+}
+
+.profile-image img {
+	display: block;
+	width: 90%;
+	height: auto;
 }
 
 div {
@@ -476,4 +482,50 @@ footer {
 		width:100%;
 	}
 
+}
+
+strong {
+  font-weight: bold;
+  color: #000;
+}
+
+.label-featured {
+  color: #d97706;
+  font-weight: 600;
+}
+
+.label-j2c {
+  color: #2a6f97;
+  font-weight: 600;
+}
+
+.filter-toolbar {
+  margin: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.filter-chip {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.filter-chip.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+#filterResultNote {
+  margin: 0.4em 0 0.8em 0;
+  color: #555;
+}
+
+#publicationList li {
+  margin-bottom: 0.8em;
 }
