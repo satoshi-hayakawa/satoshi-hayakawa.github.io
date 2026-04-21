@@ -509,3 +509,64 @@ dd {
   margin-bottom: 0.18em;
   line-height: 1.55;
 }
+
+.cv-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 0 0 1.2rem 0;
+}
+
+.cv-card {
+  display: flex;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid #e7edf3;
+  border-left: 4px solid var(--primary);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.cv-period {
+  flex: 0 0 150px;
+  color: var(--text-mid);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.cv-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.cv-title {
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.2rem;
+}
+
+.cv-detail {
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .cv-card {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .cv-period {
+    flex: none;
+    font-size: 0.9rem;
+  }
+}
+
+.cv-links-only {
+  display: inline;
+}
+
+.cv-links-only .paper-links-inline {
+  margin-left: 0;
+}

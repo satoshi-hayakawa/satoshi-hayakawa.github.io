@@ -220,8 +220,53 @@ function renderNews() {
   });
 }
 
+function renderCvCards(items, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container || !Array.isArray(items)) return;
+
+  container.innerHTML = items.map(item => {
+    const linksHtml = Array.isArray(item.links) && item.links.length > 0
+      ? `<span class="paper-links-inline">${
+          item.links.map(link =>
+            `<a class="paper-button" target="_blank" rel="noopener noreferrer" href="${link.url}">${link.label}</a>`
+          ).join("")
+        }</span>`
+      : "";
+
+    let bodyHtml = "";
+
+    if (item.detail && linksHtml) {
+      bodyHtml = `<div class="cv-detail">${item.detail}${linksHtml}</div>`;
+    } else if (item.detail) {
+      bodyHtml = `<div class="cv-detail">${item.detail}</div>`;
+    } else if (linksHtml) {
+      bodyHtml = `<div class="cv-links-only">${linksHtml}</div>`;
+    }
+
+    return `
+      <div class="cv-card">
+        <div class="cv-period">${item.period}</div>
+        <div class="cv-body">
+          <div class="cv-title">${item.title}</div>
+          ${bodyHtml}
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function renderCv() {
+  if (typeof CV === "undefined") return;
+
+  const lang = getPageLang();
+  renderCvCards(CV.employment[lang], "employmentList");
+  renderCvCards(CV.education[lang], "educationList");
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   renderNews();
   renderPublications();
   setupFilter();
+  renderCv();
 });
