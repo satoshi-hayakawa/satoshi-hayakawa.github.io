@@ -1,5 +1,23 @@
 const PUBLICATIONS = [
   {
+    authors: "Satoshi Hayakawa",
+    year: 2026,
+    title: "Convex-geometric error bounds for positive-weight kernel quadrature.",
+    venue: "arXiv preprint",
+    details: "arXiv:2605.05705",
+    tags: ["preprint"],
+    certification: null,
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2605.05705" }
+    ],
+    bibtex: `@article{hayakawa2026convex,
+  title={Convex-geometric error bounds for positive-weight kernel quadrature},
+  author={Hayakawa, Satoshi},
+  journal={arXiv preprint arXiv:2605.05705},
+  year={2026}
+}`
+  },
+  {
     authors: "Satoshi Hayakawa, Yuhta Takida, Masaaki Imaizumi, Hiromi Wakaki, Yuki Mitsufuji",
     year: 2026,
     title: "Demystifying MaskGIT sampler and beyond: adaptive order selection in masked diffusion.",
