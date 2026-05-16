@@ -1,5 +1,23 @@
 const PUBLICATIONS = [
   {
+    authors: "Chunsan Hong, Sanghyun Lee, Chieh-Hsin Lai, Satoshi Hayakawa, Yuhta Takida, Yuki Mitsufuji, Seungryong Kim, Jong Chul Ye",
+    year: 2026,
+    title: "Understanding and accelerating the training of masked diffusion language models.",
+    venue: "arXiv preprint",
+    details: "arXiv:2605.13026",
+    tags: ["preprint"],
+    certification: null,
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2605.13026" }
+    ],
+    bibtex: `@article{hayakawa2026understanding,
+  title={Understanding and accelerating the training of masked diffusion language models},
+  author={Hong, Chunsan and Lee, Sanghyun and Lai, Chieh-Hsin and Hayakawa, Satoshi and Takida, Yuhta and Mitsufuji, Yuki and Kim, Seungryong and Ye, Jong Chul},
+  journal={arXiv preprint arXiv:2605.13026},
+  year={2026}
+}`
+  },
+  {
     authors: "Satoshi Hayakawa",
     year: 2026,
     title: "Convex-geometric error bounds for positive-weight kernel quadrature.",
