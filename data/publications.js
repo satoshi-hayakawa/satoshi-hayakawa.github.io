@@ -1,19 +1,55 @@
 const PUBLICATIONS = [
   {
+    authors: "Qiyu Wu, Shuyang Cui, Satoshi Hayakawa, Wei-Yao Wang, Hiromi Wakaki, Yuki Mitsufuji",
+    year: 2026,
+    title: "MCA: modality composition awareness for robust composed multimodal retrieval.",
+    venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)",
+    details: "accepted",
+    tags: ["conference"],
+    certification: null,
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2510.15543" }
+    ],
+    bibtex: `@inproceedings{wu2026mca,
+  title={{MCA}: modality composition awareness for robust composed multimodal retrieval},
+  author={Wu, Qiyu and Cui, Shuyang and Hayakawa, Satoshi and Wang, Wei-Yao and Wakaki, Hiromi and Mitsufuji, Yuki},
+  booktitle={Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},
+  year={2026}
+}`
+  },
+  {
+    authors: "Jinya Sakurai, Patrick Pynadath, Satoshi Hayakawa, Jaehong Yoon, Xulei Yang, Nancy F Chen, Xun Xu",
+    year: 2026,
+    title: "Simplex relaxation for discrete diffusion.",
+    venue: "arXiv preprint",
+    details: "arXiv:2608.10615",
+    tags: ["preprint"],
+    certification: null,
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2608.10615" }
+    ],
+    bibtex: `@article{sakurai2026simplex,
+  title={Simplex Relaxation for Discrete Diffusion},
+  author={Sakurai, Jinya and Pynadath, Patrick and Hayakawa, Satoshi and Yoon, Jaehong and Yang, Xulei and Chen, Nancy F and Xu, Xun},
+  journal={arXiv preprint arXiv:2608.10615},
+  year={2026}
+}`
+  },
+  {
     authors: "Chunsan Hong, Sanghyun Lee, Chieh-Hsin Lai, Satoshi Hayakawa, Yuhta Takida, Yuki Mitsufuji, Seungryong Kim, Jong Chul Ye",
     year: 2026,
     title: "Understanding and accelerating the training of masked diffusion language models.",
-    venue: "arXiv preprint",
-    details: "arXiv:2605.13026",
-    tags: ["preprint"],
+    venue: "ICML 2026 Workshop on Structured Probabilistic Inference & Generative Modeling",
+    details: "",
+    tags: ["workshop"],
     certification: null,
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2605.13026" }
     ],
-    bibtex: `@article{hayakawa2026understanding,
-  title={Understanding and accelerating the training of masked diffusion language models},
+    bibtex: `@inproceedings{hong2026understanding,
+  title={Understanding and Accelerating the Training of Masked Diffusion Language Models},
   author={Hong, Chunsan and Lee, Sanghyun and Lai, Chieh-Hsin and Hayakawa, Satoshi and Takida, Yuhta and Mitsufuji, Yuki and Kim, Seungryong and Ye, Jong Chul},
-  journal={arXiv preprint arXiv:2605.13026},
+  booktitle={ICML 2026 Workshop on Structured Probabilistic Inference \& Generative Modeling},
   year={2026}
 }`
   },
@@ -89,24 +125,6 @@ const PUBLICATIONS = [
   author={Park, Yonghyun and Lai, Chieh-Hsin and Hayakawa, Satoshi and Takida, Yuhta and Murata, Naoki and Liao, Wei-Hsiang and Choi, Woosung and Cheuk, Kin Wai and Koo, Junghyun and Mitsufuji, Yuki},
   booktitle={Proceedings of the 14th International Conference on Learning Representations},
   year={2026}
-}`
-  },
-  {
-    authors: "Qiyu Wu, Shuyang Cui, Satoshi Hayakawa, Wei-Yao Wang, Hiromi Wakaki, Yuki Mitsufuji",
-    year: 2025,
-    title: "MCA: modality composition awareness for robust composed multimodal retrieval.",
-    venue: "arXiv preprint",
-    details: "arXiv:2510.15543",
-    tags: ["preprint"],
-    certification: null,
-    links: [
-      { label: "arXiv", url: "https://arxiv.org/abs/2510.15543" }
-    ],
-    bibtex: `@article{wu2025mca,
-  title={{MCA}: modality composition awareness for robust composed multimodal retrieval},
-  author={Wu, Qiyu and Cui, Shuyang and Hayakawa, Satoshi and Wang, Wei-Yao and Wakaki, Hiromi and Mitsufuji, Yuki},
-  journal={arXiv preprint arXiv:2510.15543},
-  year={2025}
 }`
   },
   {
