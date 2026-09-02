@@ -1,5 +1,23 @@
 const PUBLICATIONS = [
   {
+    authors: "Satoshi Hayakawa",
+    year: 2026,
+    title: "From truncation to commitment: persistent context in uniform discrete diffusion.",
+    venue: "arXiv preprint",
+    details: "	arXiv:2609.01043",
+    tags: ["preprint"],
+    certification: null,
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2609.01043" }
+    ],
+    bibtex: `@article{hayakawa2026truncation,
+  title={From Truncation to Commitment: Persistent Context in Uniform Discrete Diffusion},
+  author={Hayakawa, Satoshi},
+  journal={arXiv preprint arXiv:2609.01043},
+  year={2026}
+}`
+  },
+  {
     authors: "Qiyu Wu, Shuyang Cui, Satoshi Hayakawa, Wei-Yao Wang, Hiromi Wakaki, Yuki Mitsufuji",
     year: 2026,
     title: "MCA: modality composition awareness for robust composed multimodal retrieval.",
