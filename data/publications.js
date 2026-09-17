@@ -264,7 +264,7 @@ const PUBLICATIONS = [
   {
     authors: "Masaki Adachi, Satoshi Hayakawa, Xingchen Wan, Martin Jørgensen, Vu Nguyen, Harald Oberhauser, Michael A Osborne",
     year: 2024,
-    title: "Adaptive batch sizes in active learning: a probabilistic numerics approach.",
+    title: "Adaptive batch sizes for active learning: a probabilistic numerics approach.",
     venue: "Proceedings of the 27th International Conference on Artificial Intelligence and Statistics (AISTATS 2024)",
     details: "PMLR 238:496-504",
     tags: ["conference"],
@@ -274,7 +274,7 @@ const PUBLICATIONS = [
       { label: "proceedings", url: "https://proceedings.mlr.press/v238/adachi24b.html" }
     ],
     bibtex: `@inproceedings{adachi2024adaptive,
-  title={Adaptive batch sizes in active learning: A probabilistic numerics approach},
+  title={Adaptive batch sizes for active learning: A probabilistic numerics approach},
   author={Adachi, Masaki and Hayakawa, Satoshi and Wan, Xingchen and Jørgensen, Martin and Nguyen, Vu and Oberhauser, Harald and Osborne, Michael A},
   booktitle={Proceedings of the 27th International Conference on Artificial Intelligence and Statistics},
   pages={496--504},
