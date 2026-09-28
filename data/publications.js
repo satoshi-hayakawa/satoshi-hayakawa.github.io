@@ -1,5 +1,23 @@
 const PUBLICATIONS = [
   {
+    authors: "Naoki Yoshida*, Satoshi Hayakawa*, Yuhta Takida, Toshimitsu Uesaka, Hiromi Wakaki, Yuki Mitsufuji",
+    year: 2026,
+    title: "Theoretical refinement of CLIP by utilizing linear structure of optimal similarity.",
+    venue: "Transactions on Machine Learning Research",
+    details: "published online (*equal contribution)",
+    tags: ["journal"],
+    certification: null,
+    links: [
+      { label: "journal", url: "https://openreview.net/forum?id=xRKVzuZ68J" }
+    ],
+    bibtex: `@article{yoshida2026theoretical,
+  title={Theoretical refinement of {CLIP} by utilizing linear structure of optimal similarity},
+  author={Yoshida, Naoki and Hayakawa, Satoshi and Takida, Yuhta and Uesaka, Toshimitsu and Wakaki, Hiromi and Mitsufuji, Yuki},
+  journal={Transactions on Machine Learning Research},
+  year={2026}
+}`
+  },
+  {
     authors: "Satoshi Hayakawa",
     year: 2026,
     title: "From truncation to commitment: persistent context in uniform discrete diffusion.",
@@ -24,7 +42,7 @@ const PUBLICATIONS = [
     venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)",
     details: "accepted",
     tags: ["conference"],
-    certification: null,
+    certification: "oral",
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2510.15543" }
     ],
@@ -143,24 +161,6 @@ const PUBLICATIONS = [
   author={Park, Yonghyun and Lai, Chieh-Hsin and Hayakawa, Satoshi and Takida, Yuhta and Murata, Naoki and Liao, Wei-Hsiang and Choi, Woosung and Cheuk, Kin Wai and Koo, Junghyun and Mitsufuji, Yuki},
   booktitle={Proceedings of the 14th International Conference on Learning Representations},
   year={2026}
-}`
-  },
-  {
-    authors: "Naoki Yoshida*, Satoshi Hayakawa*, Yuhta Takida, Toshimitsu Uesaka, Hiromi Wakaki, Yuki Mitsufuji",
-    year: 2025,
-    title: "Theoretical refinement of CLIP by utilizing linear structure of optimal similarity.",
-    venue: "arXiv preprint",
-    details: "arXiv:2510.15508 (*equal contribution)",
-    tags: ["preprint"],
-    certification: null,
-    links: [
-      { label: "arXiv", url: "https://arxiv.org/abs/2510.15508" }
-    ],
-    bibtex: `@article{yoshida2025theoretical,
-  title={Theoretical refinement of {CLIP} by utilizing linear structure of optimal similarity},
-  author={Yoshida, Naoki and Hayakawa, Satoshi and Takida, Yuhta and Uesaka, Toshimitsu and Wakaki, Hiromi and Mitsufuji, Yuki},
-  journal={arXiv preprint arXiv:2510.15508},
-  year={2025}
 }`
   },
   {

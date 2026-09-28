@@ -18,6 +18,9 @@ function certificationLabel(certification) {
   if (certification === "j2c") {
     return `<span class="label-j2c">(J2C Certification)</span>`;
   }
+  if (certification === "oral") {
+    return `<span class="label-oral">(Oral Presentation)</span>`;
+  }
   return "";
 }
 
