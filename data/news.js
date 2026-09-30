@@ -31,7 +31,7 @@ const NEWS = [
       text: `2件の研究課題が採択されました。`,
       items: [
         `科研費 研究活動スタート支援 <a target="_blank" rel="noopener noreferrer" href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25548/">高次元離散トークン列分布の逐次近似可能性の理論</a>`,
-        `JSTさきがけ [未来数理科学] <a target="_blank" rel="noopener noreferrer" href="https://www.jst.go.jp/kisoken/presto/application/2026/260917/260917.html">条件付き予測分布の制御可能性の数理</a>）`
+        `JSTさきがけ [未来数理科学] <a target="_blank" rel="noopener noreferrer" href="https://www.jst.go.jp/kisoken/presto/application/2026/260917/260917.html">条件付き予測分布の制御可能性の数理</a>`
       ]
     }
   },
