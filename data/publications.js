@@ -1,5 +1,23 @@
 const PUBLICATIONS = [
   {
+    authors: "Ryotaro Kawata, Satoshi Hayakawa, Taiji Suzuki",
+    year: 2026,
+    title: "Counterfactual probing for parallel unmasking with hidden forest structure.",
+    venue: "arXiv preprint",
+    details: "arXiv:2609.37841",
+    tags: ["preprint"],
+    certification: null,
+    links: [
+      { label: "arXiv", url: "https://arXiv:2609.37841" }
+    ],
+    bibtex: `@article{hayakawa2026truncation,
+      title={Counterfactual Probing for Parallel Unmasking with Hidden Forest Structure},
+      author={Ryotaro Kawata and Satoshi Hayakawa and Taiji Suzuki},
+      jorunal={arXiv preprint arXiv:2609.37841},
+      year={2026}
+    }`
+  },
+  {
     authors: "Satoshi Hayakawa",
     year: 2026,
     title: "From truncation to commitment: persistent context in uniform discrete diffusion.",
@@ -20,7 +38,7 @@ const PUBLICATIONS = [
   {
     authors: "Chunsan Hong, Chieh-Hsin Lai, Satoshi Hayakawa, Yuhta Takida, Jong Chul Ye, Yuki Mitsufuji",
     year: 2026,
-    title: "Does Uniform Discrete Diffusion Need Time?",
+    title: "Does uniform discrete diffusion need time?",
     venue: "arXiv preprint",
     details: "arXiv:2609.30977",
     tags: ["preprint"],
