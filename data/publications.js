@@ -8,7 +8,7 @@ const PUBLICATIONS = [
     tags: ["preprint"],
     certification: null,
     links: [
-      { label: "arXiv", url: "https://arXiv:2609.37841" }
+      { label: "arXiv", url: "https://arxiv.org/abs/2609.37841" }
     ],
     bibtex: `@article{hayakawa2026truncation,
       title={Counterfactual Probing for Parallel Unmasking with Hidden Forest Structure},
