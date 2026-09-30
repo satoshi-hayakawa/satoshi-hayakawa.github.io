@@ -1,5 +1,23 @@
 const PUBLICATIONS = [
   {
+    authors: "Chunsan Hong, Chieh-Hsin Lai, Satoshi Hayakawa, Yuhta Takida, Jong Chul Ye, Yuki Mitsufuji",
+    year: 2026,
+    title: "Does Uniform Discrete Diffusion Need Time?",
+    venue: "arXiv preprint",
+    details: "arXiv:2609.30977",
+    tags: ["preprint"],
+    certification: null,
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2609.30977" }
+    ],
+    bibtex: `@article{hong2026uniform,
+      title={Does Uniform Discrete Diffusion Need Time?}, 
+      author={Chunsan Hong and Chieh-Hsin Lai and Satoshi Hayakawa and Yuhta Takida and Jong Chul Ye and Yuki Mitsufuji},
+      year={2026},
+      journal={arXiv preprint arXiv:2609.30977},
+    }`
+  },
+  {
     authors: "Naoki Yoshida*, Satoshi Hayakawa*, Yuhta Takida, Toshimitsu Uesaka, Hiromi Wakaki, Yuki Mitsufuji",
     year: 2026,
     title: "Theoretical refinement of CLIP by utilizing linear structure of optimal similarity.",
@@ -22,7 +40,7 @@ const PUBLICATIONS = [
     year: 2026,
     title: "From truncation to commitment: persistent context in uniform discrete diffusion.",
     venue: "arXiv preprint",
-    details: "	arXiv:2609.01043",
+    details: "arXiv:2609.01043",
     tags: ["preprint"],
     certification: null,
     links: [
