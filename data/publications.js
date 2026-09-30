@@ -1,5 +1,23 @@
 const PUBLICATIONS = [
   {
+    authors: "Satoshi Hayakawa",
+    year: 2026,
+    title: "From truncation to commitment: persistent context in uniform discrete diffusion.",
+    venue: "NeurIPS 2026 Workshop on Diffusion Language Models: Foundations, Efficiency, and Reasoning",
+    details: "",
+    tags: ["workshop"],
+    certification: null,
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2609.01043" }
+    ],
+    bibtex: `@inproceedings{hayakawa2026truncation,
+      title={From Truncation to Commitment: Persistent Context in Uniform Discrete Diffusion},
+      author={Hayakawa, Satoshi},
+      booktitle={NeurIPS 2026 Workshop on Diffusion Language Models: Foundations, Efficiency, and Reasoning},
+      year={2026}
+    }`
+  },
+  {
     authors: "Chunsan Hong, Chieh-Hsin Lai, Satoshi Hayakawa, Yuhta Takida, Jong Chul Ye, Yuki Mitsufuji",
     year: 2026,
     title: "Does Uniform Discrete Diffusion Need Time?",
@@ -32,24 +50,6 @@ const PUBLICATIONS = [
   title={Theoretical refinement of {CLIP} by utilizing linear structure of optimal similarity},
   author={Yoshida, Naoki and Hayakawa, Satoshi and Takida, Yuhta and Uesaka, Toshimitsu and Wakaki, Hiromi and Mitsufuji, Yuki},
   journal={Transactions on Machine Learning Research},
-  year={2026}
-}`
-  },
-  {
-    authors: "Satoshi Hayakawa",
-    year: 2026,
-    title: "From truncation to commitment: persistent context in uniform discrete diffusion.",
-    venue: "arXiv preprint",
-    details: "arXiv:2609.01043",
-    tags: ["preprint"],
-    certification: null,
-    links: [
-      { label: "arXiv", url: "https://arxiv.org/abs/2609.01043" }
-    ],
-    bibtex: `@article{hayakawa2026truncation,
-  title={From Truncation to Commitment: Persistent Context in Uniform Discrete Diffusion},
-  author={Hayakawa, Satoshi},
-  journal={arXiv preprint arXiv:2609.01043},
   year={2026}
 }`
   },
@@ -218,7 +218,7 @@ const PUBLICATIONS = [
     bibtex: `@inproceedings{leeb2025partial,
   title={Partial Alignment of Representations via Interventional Consistency},
   author={Leeb, Felix and Hayakawa, Satoshi and Takida, Yuhta and Mitsufuji, Yuki},
-  booktitle={ICLR Workshop on Representational Alignment},
+  booktitle={ICLR 2025 Workshop on Representational Alignment},
   year={2025}
 }`
   },
@@ -377,7 +377,7 @@ const PUBLICATIONS = [
     bibtex: `@inproceedings{adachi2023sober,
   title={SOBER: Highly Parallel Bayesian Optimization and {B}ayesian Quadrature over Discrete and Mixed Spaces},
   author={Adachi, Masaki and Hayakawa, Satoshi and Hamid, Saad and Jørgensen, Martin and Oberhauser, Harald and Osborne, Michael A},
-  booktitle={ICML Workshop on Sampling and Optimization in Discrete Space},
+  booktitle={ICML 2023 Workshop on Sampling and Optimization in Discrete Space},
   year={2023}
 }`
   },

@@ -1,7 +1,43 @@
 const NEWS = [
   {
-    date: "2026.04",
+    date: "2026.09",
     highlight: true,
+    en: {
+      text: `Two papers have been accepted (TMLR and NeurIPS 2026 DiffuLM workshop):`,
+      items: [
+        `Theoretical Refinement of CLIP by Utilizing Linear Structure of Optimal Similarity (<a target="_blank" rel="noopener noreferrer" href="https://openreview.net/forum?id=xRKVzuZ68J">TMLR</a>)`,
+        `From Truncation to Commitment: Persistent Context in Uniform Discrete Diffusion (<a target="_blank" rel="noopener noreferrer" href="https://7amin.github.io/diffulm-neurips2026/index.html">DiffuLM workshop</a>)`
+      ]
+    },
+    ja: {
+      text: `2件の論文がTMLRとNeurIPS 2026のDiffuLMワークショップにそれぞれ採択されました。`,
+      items: [
+        `Theoretical Refinement of CLIP by Utilizing Linear Structure of Optimal Similarity (<a target="_blank" rel="noopener noreferrer" href="https://openreview.net/forum?id=xRKVzuZ68J">TMLR</a>)`,
+        `From Truncation to Commitment: Persistent Context in Uniform Discrete Diffusion (<a target="_blank" rel="noopener noreferrer" href="https://7amin.github.io/diffulm-neurips2026/index.html">DiffuLM workshop</a>)`
+      ]
+    }
+  },
+  {
+    date: "2026.09",
+    highlight: false,
+    en: {
+      text: `Two of my research projects have been selected:`,
+      items: [
+        `KAKENHI Grant-in-Aid for Research Activity Start-up: <a target="_blank" rel="noopener noreferrer" href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25548/">Theoretical Foundations of Sequential Approximation for High-Dimensional Distributions over Discrete Token Sequences</a>`,
+        `JST PRESTO [Mathematical Sciences for the Future]: <a target="_blank" rel="noopener noreferrer" href="https://www.jst.go.jp/kisoken/presto/application/2026/260917/260917.html">Mathematical Foundations in Controllability of Conditional Predictive Distributions</a>`
+      ]
+    },
+    ja: {
+      text: `2件の研究課題が採択されました。`,
+      items: [
+        `科研費 研究活動スタート支援 <a target="_blank" rel="noopener noreferrer" href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25548/">高次元離散トークン列分布の逐次近似可能性の理論</a>`,
+        `JSTさきがけ [未来数理科学] <a target="_blank" rel="noopener noreferrer" href="https://www.jst.go.jp/kisoken/presto/application/2026/260917/260917.html">条件付き予測分布の制御可能性の数理</a>）`
+      ]
+    }
+  },
+  {
+    date: "2026.04",
+    highlight: false,
     en: {
       text: `Our paper "Demystifying MaskGIT sampler and beyond: adaptive order selection in masked diffusion" has been published in <a target="_blank" rel="noopener noreferrer" href="https://openreview.net/forum?id=mKlW68i2Ig">Transactions on Machine Learning Research</a> with <span class="label-featured">Featured Certification</span>!!`
     },
