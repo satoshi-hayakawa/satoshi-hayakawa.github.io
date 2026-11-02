@@ -1,5 +1,23 @@
 const PUBLICATIONS = [
   {
+    authors: "Chanhyuk Lee, Wonjung Kim, Patrick Pynadath, Jaehoon Yoo, Satoshi Hayakawa, Ruqi Zhang, Jinwoo Kim, Seunghoon Hong",
+    year: 2026,
+    title: "Asynchronous flow map language models.",
+    venue: "arXiv preprint",
+    details: "arXiv:2610.42018",
+    tags: ["preprint"],
+    certification: null,
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2610.42018" }
+    ],
+    bibtex: `@article{lee2026asynchronous,
+      title={Asynchronous Flow Map Language Models},
+      author={Chanhyuk Lee and Wonjung Kim and Patrick Pynadath and Jaehoon Yoo and Satoshi Hayakawa and Ruqi Zhang and Jinwoo Kim and Seunghoon Hong},
+      journal={arXiv preprint arXiv:2610.42018},
+      year={2026}
+    }`
+  },
+  {
     authors: "Ryotaro Kawata, Satoshi Hayakawa, Taiji Suzuki",
     year: 2026,
     title: "Counterfactual probing for parallel unmasking with hidden forest structure.",
