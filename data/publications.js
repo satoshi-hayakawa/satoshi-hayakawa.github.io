@@ -8,7 +8,8 @@ const PUBLICATIONS = [
     tags: ["preprint"],
     certification: null,
     links: [
-      { label: "arXiv", url: "https://arxiv.org/abs/2610.42018" }
+      { label: "arXiv", url: "https://arxiv.org/abs/2610.42018" },
+      { label: "openreview", url: "https://openreview.net/forum?id=kLIMaYWqt2" }
     ],
     bibtex: `@article{lee2026asynchronous,
       title={Asynchronous Flow Map Language Models},
