@@ -1,7 +1,17 @@
 const NEWS = [
   {
-    date: "2026.09",
+    date: "2026.11",
     highlight: true,
+    en: {
+      text: `I was introduced in <a target="_blank" rel="noopener noreferrer" href="https://note.com/isty_magazine/n/na7b205dd2d12">a Japansese article by UTokyo IST</a>.`,
+    },
+    ja: {
+      text: `<a target="_blank" rel="noopener noreferrer" href="https://note.com/isty_magazine/n/na7b205dd2d12">東大情報理工のNote</a>で紹介されました。`,
+    }
+  },
+  {
+    date: "2026.09",
+    highlight: false,
     en: {
       text: `Two papers have been accepted (TMLR and NeurIPS 2026 DiffuLM workshop):`,
       items: [
